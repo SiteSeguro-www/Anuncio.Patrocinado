@@ -6,9 +6,9 @@ import { viteSingleFile } from 'vite-plugin-singlefile';
 
 export default defineConfig(() => {
   return {
-    base: './',
+    base: '/',
     build: {
-      outDir: 'docs',
+      outDir: 'dist',
     },
     plugins: [react(), tailwindcss(), viteSingleFile()],
     resolve: {
