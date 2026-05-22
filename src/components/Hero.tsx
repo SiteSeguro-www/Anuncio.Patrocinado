@@ -147,12 +147,12 @@ export default function Hero() {
              <div className="w-[100%] h-[100%] border-[1px] border-purple-500/20 rounded-full absolute animate-[spin_15s_linear_infinite_reverse]" />
           </div>
 
-          <div className="relative z-10 glow-box rounded-[2rem] p-4 lg:p-8 flex items-center justify-center aspect-square md:aspect-auto">
+          <div className="relative z-10 glow-box rounded-[2rem] w-full flex items-center justify-center aspect-square md:aspect-auto">
             {/* The actual image */}
             <img 
               src={pendriveImg} 
               alt="Pendrive IA Offline Futurista" 
-              className="w-full max-w-[400px] lg:max-w-[500px] h-auto object-contain rounded-2xl drop-shadow-[0_0_40px_rgba(0,255,255,0.4)] hover:scale-105 transition-transform duration-700 relative z-20" 
+              className="w-full h-auto object-contain rounded-[2rem] drop-shadow-[0_0_40px_rgba(0,255,255,0.4)] hover:scale-105 transition-transform duration-700 relative z-20" 
               referrerPolicy="no-referrer" 
             />
           </div>
