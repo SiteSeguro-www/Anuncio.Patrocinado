@@ -6,6 +6,9 @@ import {defineConfig} from 'vite';
 export default defineConfig(() => {
   return {
     base: '/iA-Offiline/',
+    build: {
+      outDir: 'docs',
+    },
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
