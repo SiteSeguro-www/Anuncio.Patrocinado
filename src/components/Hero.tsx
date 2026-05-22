@@ -29,6 +29,11 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center pt-24 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden font-sans bg-zinc-950">
+      {/* Top Warning Banner */}
+      <div className="absolute top-0 left-0 w-full bg-red-600 text-white text-center py-2 px-4 z-50 font-bold tracking-wide">
+        Está com dúvida? <a href="https://wa.me/5511988677214?text=Ol%C3%A1%2C%20estou%20com%20d%C3%BAvidas%20sobre%20a%20Central%20de%20IA%20Offline!" target="_blank" rel="noopener noreferrer" className="underline hover:text-red-200 transition-colors cursor-pointer">Chame no WhatsApp antes de comprar</a>
+      </div>
+
       {/* Background gradients */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[150px] mix-blend-screen"></div>
