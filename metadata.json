@@ -1,0 +1,6 @@
+{
+  "name": "IA Offline Pro",
+  "description": "Uma Landing Page moderna e de alta conversão para venda de um pacote de dezenas de Inteligências Artificiais rodando localmente (offline), com privacidade e sem limites.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
