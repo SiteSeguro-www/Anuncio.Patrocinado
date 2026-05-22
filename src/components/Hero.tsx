@@ -2,6 +2,8 @@ import { motion } from "motion/react";
 import { Zap, CheckCircle2, Package, Download, MessageCircle } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 
+import pendriveImg from "../assets/images/futuristic_pendrive.png";
+
 const models = [
   { name: "Llama 3", size: "8B / 70B", specialty: "Uso Geral & Raciocínio" },
   { name: "DeepSeek", size: "V2 / Coder", specialty: "Programação Avançada" },
@@ -148,7 +150,7 @@ export default function Hero() {
           <div className="relative z-10 glow-box rounded-[2rem] p-4 lg:p-8 flex items-center justify-center aspect-square md:aspect-auto">
             {/* The actual image */}
             <img 
-              src="/src/assets/images/futuristic_pendrive.png" 
+              src={pendriveImg} 
               alt="Pendrive IA Offline Futurista" 
               className="w-full max-w-[400px] lg:max-w-[500px] h-auto object-contain rounded-2xl drop-shadow-[0_0_40px_rgba(0,255,255,0.4)] hover:scale-105 transition-transform duration-700 relative z-20" 
               referrerPolicy="no-referrer" 
