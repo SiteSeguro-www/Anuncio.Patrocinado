@@ -3,12 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Meta tags básicas -->
     <title>Sua Própria IA Offline | Sem Mensalidades, Sem Limites</title>
-    <meta name="description" content="Tenha ChatGPT, Claude, Gemini, DeepSeek e dezenas de outras IAs rodando no seu PC. Sem mensalidades. Sem limites. Totalmente privado." />
+    <meta name="description" content="Tenha ChatGPT, Claude, Gemini, DeepSeek e dezenas de outras IAs rodando localmente no seu PC. Sem mensalidades, sem limites de uso e com 100% de privacidade." />
+    <meta name="keywords" content="IA Offline, Pendrive IA, Inteligência Artificial local, Llama 3, DeepSeek, ChatGPT offline, IA sem internet" />
+    <meta name="author" content="IA Offline" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#09090b" />
+
+    <!-- Headers e pré-carregamento (performance) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+
+    <!-- Ícone da página -->
+    <link rel="icon" type="image/png" href="/og-image.png" />
+    <link rel="apple-touch-icon" href="/og-image.png" />
+
+    <!-- Open Graph / Facebook / WhatsApp / Telegram -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/" />
+    <meta property="og:title" content="Sua Própria IA Offline | Sem Mensalidades, Sem Limites" />
+    <meta property="og:description" content="Tenha ChatGPT, Claude, Gemini e dezenas de IAs avançadas rodando direto no seu PC, sem precisar de internet ou assinaturas mensais." />
+    <!-- IMPORTANTE: Para funcionar perfeitamente em todas as redes, troque a URL abaixo pelo domínio real (ex: https://seudominio.com/og-image.png) -->
+    <meta property="og:image" itemprop="image" content="https://raw.githubusercontent.com/site-preview/project/main/public/og-image.png" />
+    <meta property="og:image:secure_url" itemprop="image" content="https://raw.githubusercontent.com/site-preview/project/main/public/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="IA Offline" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sua Própria IA Offline | Sem Mensalidades, Sem Limites" />
+    <meta name="twitter:description" content="Tenha ChatGPT, Claude, Gemini e dezenas de IAs avançadas rodando direto no seu PC, sem precisar de internet ou assinaturas mensais. Privacidade total e arquivos locais!" />
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/site-preview/project/main/public/og-image.png" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Força a URL atual da janela a ser o og:url / og:image se estiver em produção
+      if (window.location.hostname !== 'localhost') {
+        const urlMeta = document.querySelector('meta[property="og:url"]');
+        if (urlMeta) {
+          urlMeta.setAttribute('content', window.location.href);
+        }
+        
+        // WhatsApp exige links absolutos para imagens:
+        const base = window.location.origin;
+        const ogImage = document.querySelector('meta[property="og:image"]');
+        const ogSecureImage = document.querySelector('meta[property="og:image:secure_url"]');
+        const twitterImage = document.querySelector('meta[name="twitter:image"]');
+        
+        if (ogImage) ogImage.setAttribute('content', base + '/og-image.png');
+        if (ogSecureImage) ogSecureImage.setAttribute('content', base + '/og-image.png');
+        if (twitterImage) twitterImage.setAttribute('content', base + '/og-image.png');
+      }
+    </script>
   </body>
 </html>
 
