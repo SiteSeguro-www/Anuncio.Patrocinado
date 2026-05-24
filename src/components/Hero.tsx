@@ -93,31 +93,17 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto lg:mx-0"
+            className="flex flex-col gap-4 max-w-sm mx-auto lg:mx-0 w-full"
           >
             {/* Download Option */}
-            <div className="flex-1 p-5 rounded-2xl bg-zinc-900/50 border border-zinc-800/80 backdrop-blur-sm shadow-xl relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-[#00f0ff]/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <div className="text-[#00f0ff] font-bold text-sm mb-1 uppercase tracking-wider">Formato Digital</div>
-              <div className="text-zinc-500 line-through text-xs font-medium mb-0.5">De R$ 247,00</div>
-              <div className="text-3xl font-bold text-white mb-1 flex items-baseline gap-1">
-                R$ 14<span className="text-lg text-zinc-400">,90</span>
+            <div className="w-full p-5 sm:p-6 rounded-2xl bg-zinc-900/50 border border-[#00f0ff]/30 backdrop-blur-sm shadow-[0_0_30px_rgba(0,240,255,0.1)] relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-[#00f0ff]/20 opacity-50 group-hover:opacity-100 transition-opacity"></div>
+              <div className="text-[#00f0ff] font-bold text-sm mb-1 uppercase tracking-wider">Acesso Imediato</div>
+              <div className="text-zinc-500 line-through text-sm font-medium mb-0.5">De R$ 247,00</div>
+              <div className="text-4xl sm:text-5xl font-bold text-white mb-1 flex items-baseline gap-1">
+                R$ 14<span className="text-xl text-zinc-400">,90</span>
               </div>
-              <div className="text-xs text-zinc-400">Download Imediato</div>
-            </div>
-
-            {/* Pendrive Option */}
-            <div className="flex-1 p-5 rounded-2xl bg-blue-900/10 border border-blue-500/30 backdrop-blur-sm shadow-xl relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-blue-400/10 opacity-100 group-hover:opacity-50 transition-opacity"></div>
-              <div className="text-blue-400 font-bold text-sm mb-1 uppercase tracking-wider flex items-center justify-between">
-                Pendrive Físico
-                <span className="bg-blue-500 text-white text-[10px] px-2 py-0.5 rounded-full">MAIS VENDIDO</span>
-              </div>
-              <div className="text-zinc-500 line-through text-xs font-medium mb-0.5">De R$ 499,00</div>
-              <div className="text-3xl font-bold text-white mb-1 flex items-baseline gap-1">
-                R$ 199<span className="text-lg text-zinc-400">,00</span>
-              </div>
-              <div className="text-xs text-blue-300">Receba em Casa</div>
+              <div className="text-sm text-zinc-300 font-medium mt-2">Download de todo o pacote de Inteligência Artificial para PC</div>
             </div>
           </motion.div>
           
@@ -136,13 +122,9 @@ export default function Hero() {
                 <MessageCircle className="w-6 h-6" /> Suporte
               </a>
             </div>
-            <div className="flex gap-4">
-              <a href="https://mpago.la/1FCXQgo" target="_blank" rel="noopener noreferrer" className="flex-1 px-4 py-4 bg-zinc-900 border border-zinc-700 text-white text-sm sm:text-base font-bold rounded-xl hover:bg-zinc-800 transition-colors flex items-center justify-center gap-2 text-center">
-                <Package className="w-5 h-5 text-blue-400" />
-                RECEBER NO PENDRIVE
-              </a>
-              <a href="https://mpago.la/1moZaAN" target="_blank" rel="noopener noreferrer" className="flex-1 px-4 py-4 bg-zinc-900 border border-zinc-700 text-white text-sm sm:text-base font-bold rounded-xl hover:bg-zinc-800 transition-colors flex items-center justify-center gap-2 text-center">
-                <Download className="w-5 h-5 text-purple-400" />
+            <div className="flex flex-col gap-4">
+              <a href="https://pay.hotmart.com/S105977865O" target="_blank" rel="noopener noreferrer" className="w-full px-4 py-5 bg-zinc-900 border-2 border-[#00f0ff]/50 text-white text-base sm:text-lg font-bold rounded-xl hover:bg-zinc-800 hover:border-[#00f0ff] transition-all flex items-center justify-center gap-3 text-center shadow-lg">
+                <Download className="w-6 h-6 text-[#00f0ff]" />
                 BAIXAR AGORA
               </a>
             </div>

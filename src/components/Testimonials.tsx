@@ -18,7 +18,7 @@ export default function Testimonials() {
     {
       name: "Felipe Mendes",
       role: "Dono de Agência",
-      content: "Compramos a versão Pendrive para os funcionários. É espetacular plugar, instalar e já ter tudo pronto sem mensalidades pra equipe toda.",
+      content: "Compramos o pacote digital para os funcionários. É espetacular fazer download, instalar e já ter tudo pronto sem mensalidades pra equipe toda.",
       photo: "https://i.pravatar.cc/150?u=c"
     },
     {
