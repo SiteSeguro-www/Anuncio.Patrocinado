@@ -12,8 +12,8 @@ export default function ImagemIlimitada() {
       
       {/* Top Banners */}
       <div className="w-full z-50 flex flex-col fixed top-0 left-0">
-        <div className="bg-[#009EE3] text-white text-center py-1.5 px-4 font-bold text-xs sm:text-sm tracking-wide flex justify-center items-center gap-2 shadow-sm border-b border-[#008ACB]">
-          <span>🤝 Garantia de 7 Dias - Compra Segura Hotmart Garante Seu Dinheiro De Volta</span>
+        <div className="bg-[#009EE3] text-white text-center py-2 px-2 sm:px-4 font-bold text-[11px] sm:text-sm tracking-wide flex justify-center items-center gap-2 shadow-sm border-b border-[#008ACB] leading-tight">
+          <span className="w-full break-words">🤝 Garantia de 7 Dias - Compra Segura Hotmart Garante Seu Dinheiro De Volta</span>
         </div>
       </div>
 
