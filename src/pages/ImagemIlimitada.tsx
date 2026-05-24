@@ -41,26 +41,51 @@ export default function ImagemIlimitada() {
               <span className="text-white font-bold">Pagamento único e acesso vitalício.</span>
             </motion.p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700 p-6 rounded-2xl inline-block mb-8 text-left w-full sm:w-auto"
-            >
-              <div className="flex flex-col items-center sm:items-start gap-1 mb-4">
-                <span className="text-zinc-400 line-through text-lg font-medium">DE R$ 97,00</span>
-                <div className="text-white text-xl">POR APENAS</div>
-                <div className="text-5xl sm:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
-                  R$ 5,90
+            <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4 mb-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700 p-6 rounded-2xl w-full sm:w-auto"
+              >
+                <div className="flex flex-col items-center sm:items-start gap-1 mb-4">
+                  <span className="text-zinc-400 line-through text-lg font-medium">DE R$ 97,00</span>
+                  <div className="text-white text-xl">POR APENAS</div>
+                  <div className="text-5xl sm:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
+                    R$ 5,90
+                  </div>
                 </div>
-              </div>
-              
-              <ul className="space-y-2 mt-4 text-sm sm:text-base font-semibold">
-                <li className="flex items-center gap-2"><Check className="text-green-400 w-5 h-5" /> ACESSO IMEDIATO</li>
-                <li className="flex items-center gap-2"><Check className="text-green-400 w-5 h-5" /> PAGAMENTO ÚNICO</li>
-                <li className="flex items-center gap-2"><Check className="text-green-400 w-5 h-5" /> ACESSO VITALÍCIO</li>
-              </ul>
-            </motion.div>
+                
+                <ul className="space-y-2 mt-4 text-sm sm:text-base font-semibold">
+                  <li className="flex items-center gap-2"><Check className="text-green-400 w-5 h-5" /> ACESSO IMEDIATO</li>
+                  <li className="flex items-center gap-2"><Check className="text-green-400 w-5 h-5" /> PAGAMENTO ÚNICO</li>
+                  <li className="flex items-center gap-2"><Check className="text-green-400 w-5 h-5" /> ACESSO VITALÍCIO</li>
+                </ul>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="flex items-center mt-0 sm:mt-12"
+              >
+                {/* 7 Days Shield */}
+                <div className="relative z-10 w-20 h-24 bg-gradient-to-b from-zinc-800 to-black rounded-b-full border border-yellow-500 shadow-[0_0_15px_rgba(234,179,8,0.2)] flex flex-col items-center pt-3">
+                  <div className="text-4xl font-black text-yellow-500 drop-shadow-md leading-none">7</div>
+                  <div className="text-xs font-bold text-yellow-500 tracking-wider">DIAS</div>
+                </div>
+                
+                {/* Right text panel */}
+                <div className="bg-gradient-to-b from-yellow-400 to-yellow-600 rounded-r-xl h-[86px] flex flex-col justify-center py-2 pr-4 pl-6 -ml-4 z-0 shadow-lg">
+                  <div className="text-black font-black text-xs sm:text-sm uppercase leading-tight mb-1">
+                    Garantia<br/>Seu dinheiro<br/>de volta
+                  </div>
+                  <div className="bg-black text-white text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1 w-max">
+                    <Shield className="w-3 h-3 text-red-500 fill-current" /> COMPRA SEGURA HOTMART
+                  </div>
+                </div>
+              </motion.div>
+            </div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
