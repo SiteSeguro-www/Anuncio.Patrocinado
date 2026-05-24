@@ -1,7 +1,15 @@
 import { useState } from 'react';
 import { MessageCircle, X, Send } from 'lucide-react';
 
-export default function ChatWidget() {
+interface ChatWidgetProps {
+  message?: string;
+  whatsappUrl?: string;
+}
+
+export default function ChatWidget({
+  message = "Tem alguma dúvida sobre a IA Offline ou sobre nossa oferta atual?",
+  whatsappUrl = "https://wa.me/5511988677214?text=Ol%C3%A1%2C%20estou%20com%20d%C3%BAvidas%20sobre%20a%20Central%20de%20IA%20Offline!"
+}: ChatWidgetProps = {}) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -36,7 +44,7 @@ export default function ChatWidget() {
               Olá! 👋 Percebi que você está navegando no nosso site. 
             </p>
             <p className="text-sm">
-              Tem alguma dúvida sobre a IA Offline ou sobre nossa oferta atual?
+              {message}
             </p>
           </div>
           <div className="bg-zinc-800 text-zinc-100 p-3 rounded-2xl rounded-tl-sm max-w-[90%] self-start shadow-sm border border-zinc-700/50">
@@ -44,7 +52,7 @@ export default function ChatWidget() {
               Nossa equipe está pronta para te atender no WhatsApp:
             </p>
             <a 
-              href="https://wa.me/5511988677214?text=Ol%C3%A1%2C%20estou%20com%20d%C3%BAvidas%20sobre%20a%20Central%20de%20IA%20Offline!" 
+              href={whatsappUrl} 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-colors text-sm shadow-md"
@@ -58,7 +66,7 @@ export default function ChatWidget() {
         {/* Footer (Fake input) */}
         <div className="p-3 bg-zinc-900 border-t border-zinc-800 flex items-center gap-2 relative">
           <a
-            href="https://wa.me/5511988677214?text=Ol%C3%A1%2C%20estou%20com%20d%C3%BAvidas%20sobre%20a%20Central%20de%20IA%20Offline!" 
+            href={whatsappUrl} 
             target="_blank" 
             rel="noopener noreferrer" 
             className="absolute inset-0 z-10"

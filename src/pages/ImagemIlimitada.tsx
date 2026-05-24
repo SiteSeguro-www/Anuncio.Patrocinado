@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Check, X, Shield, Star, Image as ImageIcon, Zap, Infinity, CreditCard, Sparkles, MonitorSmartphone } from "lucide-react";
 import FloatingGallery from "../components/FloatingGallery";
+import ChatWidget from "../components/ChatWidget";
 
 export default function ImagemIlimitada() {
   const whatsappUrl = "https://wa.me/5511988677214?text=Ol%C3%A1%2C%20quero%20acesso%20%C3%A0%20IA%20de%20Imagens!";
@@ -12,7 +13,7 @@ export default function ImagemIlimitada() {
       {/* Top Banners */}
       <div className="w-full z-50 flex flex-col fixed top-0 left-0">
         <div className="bg-[#009EE3] text-white text-center py-1.5 px-4 font-bold text-xs sm:text-sm tracking-wide flex justify-center items-center gap-2 shadow-sm border-b border-[#008ACB]">
-          <span>🤝 Compra Segura - O Mercado Pago garante o seu dinheiro de volta!</span>
+          <span>🤝 Garantia de 7 Dias - Compra Segura Hotmart Garante Seu Dinheiro De Volta</span>
         </div>
       </div>
 
@@ -21,16 +22,6 @@ export default function ImagemIlimitada() {
         <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12">
           
           <div className="flex-1 text-center lg:text-left z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-sm font-medium mb-6"
-            >
-              <Sparkles className="w-4 h-4 text-blue-400" />
-              <span>Geração de Imagem com IA</span>
-            </motion.div>
-            
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -411,7 +402,7 @@ export default function ImagemIlimitada() {
                 <Check className="w-5 h-5 text-green-400" /> Pagamento Seguro
               </div>
               <div className="flex items-center gap-2 font-semibold text-zinc-300">
-                <Check className="w-5 h-5 text-green-400" /> Processado pelo Mercado Pago
+                <Check className="w-5 h-5 text-green-400" /> Processado pela Hotmart
               </div>
               <div className="flex items-center gap-2 font-semibold text-zinc-300">
                 <Check className="w-5 h-5 text-green-400" /> Ambiente protegido
@@ -490,7 +481,7 @@ export default function ImagemIlimitada() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-zinc-500 text-sm font-semibold">
           <div className="flex items-center gap-2">
             <CreditCard className="w-5 h-5 text-zinc-400" />
-            Pagamento Seguro via Mercado Pago
+            Pagamento Seguro via Hotmart
           </div>
           <div className="flex items-center gap-2">
              <Infinity className="w-5 h-5 text-zinc-400" />
@@ -507,6 +498,10 @@ export default function ImagemIlimitada() {
         </div>
       </footer>
 
+      <ChatWidget 
+        message="Tem alguma dúvida sobre nosso pacote de geração de imagens com IA?"
+        whatsappUrl="https://wa.me/5511988677214?text=Ol%C3%A1%2C%20estou%20com%20d%C3%BAvidas%20sobre%20o%20pacote%20da%20IA%20de%20Imagens!"
+      />
     </div>
   );
 }

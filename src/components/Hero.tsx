@@ -63,7 +63,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.05 }}
             className="bg-[#009EE3] text-white text-center py-2 px-4 font-bold text-sm sm:text-base tracking-wide flex justify-center items-center gap-2 rounded-lg shadow-md lg:mx-0 -mt-2 mb-2"
           >
-            <span>🤝 Compra Segura - O Mercado Pago garante o seu dinheiro de volta!</span>
+            <span>🤝 Garantia de 7 Dias - Compra Segura Hotmart Garante Seu Dinheiro De Volta</span>
           </motion.div>
 
           <motion.p 
