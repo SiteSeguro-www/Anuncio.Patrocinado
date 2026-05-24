@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Check, X, Shield, Star, Image as ImageIcon, Zap, Infinity, CreditCard, Sparkles, MonitorSmartphone } from "lucide-react";
+import FloatingGallery from "../components/FloatingGallery";
 
 export default function ImagemIlimitada() {
   const whatsappUrl = "https://wa.me/5511988677214?text=Ol%C3%A1%2C%20quero%20acesso%20%C3%A0%20IA%20de%20Imagens!";
@@ -85,43 +86,11 @@ export default function ImagemIlimitada() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="flex-1 relative w-full max-w-lg mx-auto"
+            className="flex-1 relative w-full h-[300px] sm:h-[400px] md:h-[500px]"
           >
-             {/* Decorative Elements */}
-             <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/30 to-purple-600/30 rounded-3xl blur-3xl transform scale-110"></div>
-             
-             {/* Main Image Box */}
-             <div className="relative z-10 bg-zinc-800 rounded-3xl border border-zinc-700 shadow-2xl p-2 overflow-hidden aspect-[4/3] flex items-center justify-center group">
-               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 z-0"></div>
-               
-               <div className="grid grid-cols-2 gap-2 w-full h-full p-2 relative z-10">
-                 <div className="bg-zinc-700/50 rounded-xl overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1698656621946-bd699df8a391?auto=format&fit=crop&q=80" alt="Exemplo IA 1" className="w-full h-full object-cover mix-blend-overlay group-hover:scale-110 transition-transform duration-700" />
-                 </div>
-                 <div className="bg-zinc-700/50 rounded-xl overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1685370217039-38ddad592d3b?auto=format&fit=crop&q=80" alt="Exemplo IA 2" className="w-full h-full object-cover mix-blend-overlay group-hover:scale-110 transition-transform duration-700 delay-75" />
-                 </div>
-                 <div className="bg-zinc-700/50 rounded-xl overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1684784918239-09419b48b6fe?auto=format&fit=crop&q=80" alt="Exemplo IA 3" className="w-full h-full object-cover mix-blend-overlay group-hover:scale-110 transition-transform duration-700 delay-150" />
-                 </div>
-                 <div className="bg-zinc-700/50 rounded-xl overflow-hidden relative flex items-center justify-center flex-col gap-2">
-                    <Sparkles className="w-8 h-8 text-blue-400 animate-pulse" />
-                    <span className="text-sm font-bold text-white tracking-widest uppercase">Gerando...</span>
-                 </div>
-               </div>
-             </div>
-             
-             {/* Floating Badge */}
-             <div className="absolute -bottom-6 -right-6 bg-zinc-900 border border-zinc-800 p-4 rounded-2xl shadow-xl flex items-center gap-3 z-20 animate-bounce">
-                <div className="bg-blue-500/20 p-2 rounded-full text-blue-400">
-                  <ImageIcon className="w-6 h-6" />
-                </div>
-                <div>
-                  <div className="font-bold text-white text-sm">Alta Qualidade</div>
-                  <div className="text-xs text-zinc-400">Resolução 4K</div>
-                </div>
-             </div>
+             <FloatingGallery />
           </motion.div>
+
         </div>
       </section>
 
