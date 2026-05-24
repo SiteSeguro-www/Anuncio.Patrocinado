@@ -1,22 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 
-const AI_IMAGES = [
-  "/ia.jpeg",
-  "/ia2.jpeg",
-  "/ia3.jpeg",
-  "/ia4.jpeg",
-  "/ia5.jpeg",
-  "/ia6.jpeg",
-  "/ia7.jpeg",
-  "/ia8.jpeg",
-  "/ia9.jpeg",
-  "/ia10.jpeg",
-  "/ia11.jpeg",
-  "/ia12.jpeg",
-  "/ia13.jpeg",
-  "/ia14.jpeg",
-  "/ia15.jpeg"
-];
+const ALL_IMAGES = Array.from({ length: 40 }, (_, i) => i === 0 ? "/ia.jpeg" : `/ia${i + 1}.jpeg`);
+
+// Simple shuffle
+for (let i = ALL_IMAGES.length - 1; i > 0; i--) {
+  const j = Math.floor(Math.random() * (i + 1));
+  [ALL_IMAGES[i], ALL_IMAGES[j]] = [ALL_IMAGES[j], ALL_IMAGES[i]];
+}
 
 export default function FloatingGallery() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -38,13 +28,13 @@ export default function FloatingGallery() {
       const speed = 0.0015 + Math.random() * 0.001;
       
       // Ellipse radii
-      const radiusX = 180 + Math.random() * 60; // 180 to 240
-      const radiusZ = 120 + Math.random() * 40; // 120 to 160
+      const radiusX = 180 + Math.random() * 120; // 180 to 300
+      const radiusZ = 120 + Math.random() * 80; // 120 to 200
       
       // Vertical offset to make it look like a cloud
-      const yOffset = -50 + Math.random() * 100;
+      const yOffset = -100 + Math.random() * 200;
       
-      const zOffset = Math.random() * 20 - 10;
+      const zOffset = Math.random() * 60 - 30;
 
       return { element: el, angle, speed, yOffset, radiusX, radiusZ, zOffset };
     });
@@ -117,7 +107,7 @@ export default function FloatingGallery() {
         style={{ transformStyle: 'preserve-3d' }}
         ref={containerRef}
       >
-        {AI_IMAGES.map((src, idx) => (
+        {ALL_IMAGES.map((src, idx) => (
           <div
             key={idx}
             className="absolute rounded-xl overflow-hidden cursor-pointer transition-[box-shadow,border-color,filter] duration-300 border border-white/10 bg-zinc-900"
