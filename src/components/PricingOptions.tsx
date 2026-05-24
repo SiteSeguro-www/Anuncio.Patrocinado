@@ -87,7 +87,7 @@ export default function PricingOptions() {
               <div className="mb-8">
                 <span className="text-blue-300/60 line-through text-lg font-medium">De R$ 247,00</span>
                 <div className="text-5xl font-bold text-white flex items-baseline gap-2 mt-1">
-                  <span className="text-2xl text-[#00f0ff] font-medium">Por</span> R$ 49<span className="text-2xl text-white/50">,90</span>
+                  <span className="text-2xl text-[#00f0ff] font-medium">Por</span> R$ 14<span className="text-2xl text-white/50">,90</span>
                 </div>
               </div>
               

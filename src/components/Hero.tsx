@@ -29,9 +29,12 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center pt-24 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden font-sans bg-zinc-950">
-      {/* Top Warning Banner */}
-      <div className="absolute top-0 left-0 w-full bg-red-600 text-white text-center py-2 px-4 z-50 font-bold tracking-wide">
-        Está com dúvida? <a href="https://wa.me/5511988677214?text=Ol%C3%A1%2C%20estou%20com%20d%C3%BAvidas%20sobre%20a%20Central%20de%20IA%20Offline!" target="_blank" rel="noopener noreferrer" className="underline hover:text-red-200 transition-colors cursor-pointer">Chame no WhatsApp antes de comprar</a>
+      {/* Top Warning Banners */}
+      <div className="absolute top-0 left-0 w-full z-50 flex flex-col">
+        {/* Support Banner */}
+        <div className="bg-zinc-900 border-b border-zinc-800 text-zinc-300 text-center py-2 px-4 font-medium tracking-wide text-sm sm:text-base">
+          Está com dúvida? <a href="https://wa.me/5511988677214?text=Ol%C3%A1%2C%20estou%20com%20d%C3%BAvidas%20sobre%20a%20Central%20de%20IA%20Offline!" target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-[#25D366] transition-colors cursor-pointer font-bold">Chame no WhatsApp antes de comprar</a>
+        </div>
       </div>
 
       {/* Background gradients */}
@@ -51,9 +54,18 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="font-display text-4xl sm:text-5xl lg:text-[3.5rem] font-bold tracking-tight text-white leading-[1.1]"
           >
-            TODAS AS IAs SEM MENSALIDADE <span className="text-gradient block mt-2">POR APENAS R$ 49,90</span>
+            TODAS AS IAs SEM MENSALIDADE <span className="text-gradient block mt-2">POR APENAS R$ 14,90</span>
           </motion.h1>
           
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.05 }}
+            className="bg-[#009EE3] text-white text-center py-2 px-4 font-bold text-sm sm:text-base tracking-wide flex justify-center items-center gap-2 rounded-lg shadow-md lg:mx-0 -mt-2 mb-2"
+          >
+            <span>🤝 Compra Segura - O Mercado Pago garante o seu dinheiro de volta!</span>
+          </motion.div>
+
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -89,7 +101,7 @@ export default function Hero() {
               <div className="text-[#00f0ff] font-bold text-sm mb-1 uppercase tracking-wider">Formato Digital</div>
               <div className="text-zinc-500 line-through text-xs font-medium mb-0.5">De R$ 247,00</div>
               <div className="text-3xl font-bold text-white mb-1 flex items-baseline gap-1">
-                R$ 49<span className="text-lg text-zinc-400">,90</span>
+                R$ 14<span className="text-lg text-zinc-400">,90</span>
               </div>
               <div className="text-xs text-zinc-400">Download Imediato</div>
             </div>
