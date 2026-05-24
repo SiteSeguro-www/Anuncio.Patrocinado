@@ -8,7 +8,7 @@ export default function ImagemIlimitada() {
   const checkoutUrl = "https://pay.hotmart.com/C105976185J";
 
   return (
-    <div className="min-h-screen bg-white font-sans selection:bg-blue-500/30 text-zinc-900">
+    <div className="min-h-screen bg-white font-sans selection:bg-blue-500/30 text-zinc-900 overflow-x-hidden w-full max-w-[100vw]">
       
       {/* Top Banners */}
       <div className="w-full z-50 flex flex-col fixed top-0 left-0">

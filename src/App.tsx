@@ -16,7 +16,7 @@ import ChatWidget from './components/ChatWidget';
 export default function App() {
   return (
     <>
-      <main className="min-h-screen bg-zinc-950 font-sans selection:bg-blue-500/30">
+      <main className="min-h-screen bg-zinc-950 font-sans selection:bg-blue-500/30 overflow-x-hidden w-full max-w-[100vw]">
         <Hero />
         <Features />
         <Comparison />
