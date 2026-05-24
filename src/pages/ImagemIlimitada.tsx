@@ -4,7 +4,7 @@ import FloatingGallery from "../components/FloatingGallery";
 
 export default function ImagemIlimitada() {
   const whatsappUrl = "https://wa.me/5511988677214?text=Ol%C3%A1%2C%20quero%20acesso%20%C3%A0%20IA%20de%20Imagens!";
-  const checkoutUrl = "#"; // Substituir pelo link de checkout se houver
+  const checkoutUrl = "https://pay.hotmart.com/C105976185J";
 
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-blue-500/30 text-zinc-900">
@@ -37,7 +37,7 @@ export default function ImagemIlimitada() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight"
             >
-              🔥 CRIE IMAGENS <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">ILIMITADAS</span> COM IA
+              CRIE IMAGENS <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">ILIMITADAS</span> COM IA
             </motion.h1>
 
             <motion.p
@@ -60,7 +60,7 @@ export default function ImagemIlimitada() {
                 <span className="text-zinc-400 line-through text-lg font-medium">DE R$ 97,00</span>
                 <div className="text-white text-xl">POR APENAS</div>
                 <div className="text-5xl sm:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
-                  R$ 9,90
+                  R$ 5,90
                 </div>
               </div>
               
@@ -328,7 +328,7 @@ export default function ImagemIlimitada() {
             >
               <div className="text-blue-600 font-bold uppercase tracking-widest text-sm mb-2">Nossa solução:</div>
               <div className="text-5xl sm:text-7xl font-black text-zinc-900 bg-white px-8 py-5 rounded-3xl shadow-xl border border-blue-100 flex flex-col items-center">
-                R$ 9,90 <span className="text-lg font-bold text-green-500 uppercase tracking-widest mt-2 border-t border-zinc-100 pt-2 w-full">Uma única vez</span>
+                R$ 5,90 <span className="text-lg font-bold text-green-500 uppercase tracking-widest mt-2 border-t border-zinc-100 pt-2 w-full">Uma única vez</span>
               </div>
             </motion.div>
 
@@ -460,7 +460,7 @@ export default function ImagemIlimitada() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-7xl sm:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-500 mb-12 drop-shadow-sm"
           >
-            R$ 9,90
+            R$ 5,90
           </motion.div>
           
           <motion.a 
