@@ -1,98 +1,65 @@
 import { motion } from "framer-motion";
-import {
-  Check,
-  X,
-  Shield,
-  Star,
-  Image as ImageIcon,
-  Zap,
-  Infinity,
-  CreditCard,
-  Sparkles,
-  MonitorSmartphone,
-} from "lucide-react";
+import { Check, X, Shield, Star, Image as ImageIcon, Zap, Infinity, CreditCard, Sparkles, MonitorSmartphone } from "lucide-react";
 import FloatingGallery from "../components/FloatingGallery";
 import ChatWidget from "../components/ChatWidget";
 
 export default function ImagemIlimitada() {
-  const whatsappUrl =
-    "https://wa.me/5511988677214?text=Ol%C3%A1%2C%20quero%20acesso%20%C3%A0%20IA%20de%20Imagens!";
+  const whatsappUrl = "https://wa.me/5511988677214?text=Ol%C3%A1%2C%20quero%20acesso%20%C3%A0%20IA%20de%20Imagens!";
   const checkoutUrl = "https://pay.hotmart.com/C105976185J";
 
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-blue-500/30 text-zinc-900">
+      
       {/* Top Banners */}
       <div className="w-full z-50 flex flex-col fixed top-0 left-0">
         <div className="bg-[#009EE3] text-white text-center py-1.5 px-4 font-bold text-xs sm:text-sm tracking-wide flex justify-center items-center gap-2 shadow-sm border-b border-[#008ACB]">
-          <span>
-            🤝 Garantia de 7 Dias - Compra Segura Hotmart Garante Seu Dinheiro
-            De Volta
-          </span>
+          <span>🤝 Garantia de 7 Dias - Compra Segura Hotmart Garante Seu Dinheiro De Volta</span>
         </div>
       </div>
 
       {/* HERO SECTION */}
       <section className="relative pt-28 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-zinc-900 text-white">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
-          <div className="flex-1 text-center lg:text-left z-10 w-full">
+        <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12">
+          
+          <div className="flex-1 text-center lg:text-left z-10">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight"
             >
-              CRIE IMAGENS{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-                ILIMITADAS
-              </span>{" "}
-              COM IA
+              CRIE IMAGENS <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">ILIMITADAS</span> COM IA
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg sm:text-xl md:text-2xl text-zinc-300 font-medium mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0"
+              className="text-xl sm:text-2xl text-zinc-300 font-medium mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0"
             >
-              Sem mensalidade. Sem limite de uso. Sem limite de tokens.
-              <br />
-              <span className="text-white font-bold block mt-2">
-                Pagamento único e acesso vitalício.
-              </span>
+              Sem mensalidade. Sem limite de uso. Sem limite de tokens.<br/>
+              <span className="text-white font-bold">Pagamento único e acesso vitalício.</span>
             </motion.p>
 
-            <div className="flex flex-col xl:flex-row items-center lg:items-start gap-6 lg:gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4 mb-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700 p-6 rounded-2xl w-full sm:w-auto max-w-md mx-auto lg:mx-0"
+                className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700 p-6 rounded-2xl w-full sm:w-auto"
               >
-                <div className="flex flex-col items-center sm:items-start gap-1 mb-4 text-center sm:text-left">
-                  <span className="text-zinc-400 line-through text-base sm:text-lg font-medium">
-                    DE R$ 97,00
-                  </span>
-                  <div className="text-white text-lg sm:text-xl">
-                    POR APENAS
-                  </div>
+                <div className="flex flex-col items-center sm:items-start gap-1 mb-4">
+                  <span className="text-zinc-400 line-through text-lg font-medium">DE R$ 97,00</span>
+                  <div className="text-white text-xl">POR APENAS</div>
                   <div className="text-5xl sm:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
                     R$ 5,90
                   </div>
                 </div>
-
-                <ul className="space-y-2 mt-4 text-sm sm:text-base font-semibold flex flex-col items-center sm:items-start">
-                  <li className="flex items-center gap-2">
-                    <Check className="text-green-400 w-5 h-5 flex-shrink-0" />{" "}
-                    ACESSO IMEDIATO
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="text-green-400 w-5 h-5 flex-shrink-0" />{" "}
-                    PAGAMENTO ÚNICO
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="text-green-400 w-5 h-5 flex-shrink-0" />{" "}
-                    ACESSO VITALÍCIO
-                  </li>
+                
+                <ul className="space-y-2 mt-4 text-sm sm:text-base font-semibold">
+                  <li className="flex items-center gap-2"><Check className="text-green-400 w-5 h-5" /> ACESSO IMEDIATO</li>
+                  <li className="flex items-center gap-2"><Check className="text-green-400 w-5 h-5" /> PAGAMENTO ÚNICO</li>
+                  <li className="flex items-center gap-2"><Check className="text-green-400 w-5 h-5" /> ACESSO VITALÍCIO</li>
                 </ul>
               </motion.div>
 
@@ -100,30 +67,21 @@ export default function ImagemIlimitada() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="flex items-center justify-center mt-2 xl:mt-12"
+                className="flex items-center mt-0 sm:mt-12"
               >
                 {/* 7 Days Shield */}
-                <div className="relative z-10 w-20 h-24 bg-gradient-to-b from-zinc-800 to-black rounded-b-full border border-yellow-500 shadow-[0_0_15px_rgba(234,179,8,0.2)] flex flex-col items-center pt-3 shrink-0">
-                  <div className="text-4xl font-black text-yellow-500 drop-shadow-md leading-none">
-                    7
-                  </div>
-                  <div className="text-xs font-bold text-yellow-500 tracking-wider">
-                    DIAS
-                  </div>
+                <div className="relative z-10 w-20 h-24 bg-gradient-to-b from-zinc-800 to-black rounded-b-full border border-yellow-500 shadow-[0_0_15px_rgba(234,179,8,0.2)] flex flex-col items-center pt-3">
+                  <div className="text-4xl font-black text-yellow-500 drop-shadow-md leading-none">7</div>
+                  <div className="text-xs font-bold text-yellow-500 tracking-wider">DIAS</div>
                 </div>
-
+                
                 {/* Right text panel */}
-                <div className="bg-gradient-to-b from-yellow-400 to-yellow-600 rounded-r-xl h-[86px] flex flex-col justify-center py-2 pr-4 pl-6 -ml-4 z-0 shadow-lg shrink-0">
-                  <div className="text-black font-black text-xs sm:text-sm uppercase leading-tight mb-1 text-left">
-                    Garantia
-                    <br />
-                    Seu dinheiro
-                    <br />
-                    de volta
+                <div className="bg-gradient-to-b from-yellow-400 to-yellow-600 rounded-r-xl h-[86px] flex flex-col justify-center py-2 pr-4 pl-6 -ml-4 z-0 shadow-lg">
+                  <div className="text-black font-black text-xs sm:text-sm uppercase leading-tight mb-1">
+                    Garantia<br/>Seu dinheiro<br/>de volta
                   </div>
                   <div className="bg-black text-white text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1 w-max">
-                    <Shield className="w-3 h-3 text-red-500 fill-current shrink-0" />{" "}
-                    COMPRA SEGURA HOTMART
+                    <Shield className="w-3 h-3 text-red-500 fill-current" /> COMPRA SEGURA HOTMART
                   </div>
                 </div>
               </motion.div>
@@ -134,10 +92,7 @@ export default function ImagemIlimitada() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <a
-                href={checkoutUrl}
-                className="block w-full sm:w-auto sm:inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-bold text-xl sm:text-2xl py-4 sm:py-5 px-6 sm:px-12 rounded-2xl shadow-[0_0_40px_rgba(37,99,235,0.4)] hover:shadow-[0_0_60px_rgba(37,99,235,0.6)] transition-all duration-300 hover:scale-105 mx-auto max-w-sm sm:max-w-none"
-              >
+              <a href={checkoutUrl} className="block w-full sm:inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-bold text-xl sm:text-2xl py-4 sm:py-5 px-8 sm:px-12 rounded-2xl shadow-[0_0_40px_rgba(37,99,235,0.4)] hover:shadow-[0_0_60px_rgba(37,99,235,0.6)] transition-all duration-300 hover:scale-105">
                 QUERO ACESSO AGORA
               </a>
             </motion.div>
@@ -149,15 +104,16 @@ export default function ImagemIlimitada() {
             transition={{ duration: 0.8 }}
             className="flex-1 relative w-full h-[300px] sm:h-[400px] md:h-[500px]"
           >
-            <FloatingGallery />
+             <FloatingGallery />
           </motion.div>
+
         </div>
       </section>
 
       {/* DOR DO CLIENTE */}
       <section className="py-24 px-4 sm:px-6 bg-zinc-50 relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.h2
+          <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -174,9 +130,9 @@ export default function ImagemIlimitada() {
               "Créditos acabam rapidamente",
               "Bloqueios por limite de tokens",
               "Assinaturas cada vez mais caras",
-              "Dependência de pagamentos recorrentes",
+              "Dependência de pagamentos recorrentes"
             ].map((text, i) => (
-              <motion.div
+              <motion.div 
                 key={i}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -187,22 +143,19 @@ export default function ImagemIlimitada() {
                 <div className="bg-red-100 p-2 rounded-full flex-shrink-0">
                   <X className="w-5 h-5 text-red-600" strokeWidth={3} />
                 </div>
-                <span className="text-lg font-semibold text-zinc-800">
-                  {text}
-                </span>
+                <span className="text-lg font-semibold text-zinc-800">{text}</span>
               </motion.div>
             ))}
           </div>
 
-          <motion.p
+          <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="text-xl sm:text-2xl font-bold text-red-600 max-w-3xl mx-auto leading-relaxed p-6 bg-red-50 rounded-2xl"
           >
-            "Todo mês você paga novamente apenas para continuar usando uma
-            ferramenta que já deveria ser sua."
+            "Todo mês você paga novamente apenas para continuar usando uma ferramenta que já deveria ser sua."
           </motion.p>
         </div>
       </section>
@@ -211,10 +164,10 @@ export default function ImagemIlimitada() {
       <section className="py-24 px-4 sm:px-6 bg-zinc-900 text-white relative">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] mix-blend-screen pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[120px] mix-blend-screen pointer-events-none"></div>
-
+        
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <motion.h2
+            <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -223,15 +176,14 @@ export default function ImagemIlimitada() {
             >
               A SOLUÇÃO DEFINITIVA
             </motion.h2>
-            <motion.p
+            <motion.p 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-xl sm:text-2xl text-zinc-300 font-medium max-w-3xl mx-auto leading-relaxed"
             >
-              Tenha acesso a uma poderosa IA para criar imagens quando quiser,
-              sem mensalidades e sem limitações absurdas.
+              Tenha acesso a uma poderosa IA para criar imagens quando quiser, sem mensalidades e sem limitações absurdas.
             </motion.p>
           </div>
 
@@ -248,9 +200,9 @@ export default function ImagemIlimitada() {
               "Economize centenas de reais por ano",
               "Atualizações incluídas",
               "Sem cobranças recorrentes",
-              "Acesso imediato após pagamento",
+              "Acesso imediato após pagamento"
             ].map((text, i) => (
-              <motion.div
+              <motion.div 
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -271,7 +223,7 @@ export default function ImagemIlimitada() {
       {/* COMPARAÇÃO */}
       <section className="py-24 px-4 sm:px-6 bg-white">
         <div className="max-w-5xl mx-auto text-center">
-          <motion.h2
+          <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -282,8 +234,9 @@ export default function ImagemIlimitada() {
           </motion.h2>
 
           <div className="flex flex-col md:flex-row gap-8 lg:gap-12">
+            
             {/* Outras IAs */}
-            <motion.div
+            <motion.div 
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -291,32 +244,25 @@ export default function ImagemIlimitada() {
               className="flex-1 bg-zinc-50 border border-zinc-200 rounded-3xl p-8 relative overflow-hidden"
             >
               <div className="absolute top-0 left-0 w-full h-2 bg-red-500"></div>
-              <h3 className="text-2xl font-black text-zinc-400 mb-8 uppercase tracking-widest">
-                OUTRAS IAs
-              </h3>
+              <h3 className="text-2xl font-black text-zinc-400 mb-8 uppercase tracking-widest">OUTRAS IAs</h3>
               <ul className="space-y-6 text-left">
                 {[
                   "Mensalidade",
                   "Limite de uso",
                   "Limite de tokens",
                   "Renovação constante",
-                  "Custos altos",
+                  "Custos altos"
                 ].map((text, i) => (
                   <li key={i} className="flex items-center gap-3">
-                    <X
-                      className="w-6 h-6 text-red-500 flex-shrink-0"
-                      strokeWidth={2.5}
-                    />
-                    <span className="text-xl font-medium text-zinc-600">
-                      {text}
-                    </span>
+                    <X className="w-6 h-6 text-red-500 flex-shrink-0" strokeWidth={2.5} />
+                    <span className="text-xl font-medium text-zinc-600">{text}</span>
                   </li>
                 ))}
               </ul>
             </motion.div>
 
             {/* Nossa Solução */}
-            <motion.div
+            <motion.div 
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -335,18 +281,16 @@ export default function ImagemIlimitada() {
                   "Uso ilimitado",
                   "Sem limite de tokens",
                   "Acesso vitalício",
-                  "Muito mais econômica",
+                  "Muito mais econômica"
                 ].map((text, i) => (
                   <li key={i} className="flex items-center gap-3">
-                    <Check
-                      className="w-6 h-6 text-green-400 flex-shrink-0"
-                      strokeWidth={3}
-                    />
+                    <Check className="w-6 h-6 text-green-400 flex-shrink-0" strokeWidth={3} />
                     <span className="text-xl font-bold text-white">{text}</span>
                   </li>
                 ))}
               </ul>
             </motion.div>
+
           </div>
         </div>
       </section>
@@ -354,7 +298,7 @@ export default function ImagemIlimitada() {
       {/* ECONOMIA */}
       <section className="py-24 px-4 sm:px-6 bg-zinc-100 border-y border-zinc-200">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.h2
+          <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -365,26 +309,23 @@ export default function ImagemIlimitada() {
           </motion.h2>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
-            <motion.div
+            
+            <motion.div 
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
               className="flex flex-col items-center gap-2"
             >
-              <div className="text-zinc-500 font-bold uppercase tracking-widest text-sm mb-2">
-                IA tradicional:
-              </div>
-              <div className="text-3xl font-bold text-zinc-400 line-through">
-                R$ 49/mês
-              </div>
+              <div className="text-zinc-500 font-bold uppercase tracking-widest text-sm mb-2">IA tradicional:</div>
+              <div className="text-3xl font-bold text-zinc-400 line-through">R$ 49/mês</div>
               <div className="text-xl font-medium text-zinc-500">=</div>
               <div className="text-4xl sm:text-5xl font-black text-zinc-600 bg-white px-6 py-4 rounded-2xl shadow-sm border border-zinc-200">
                 R$ 588 / ano
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -393,27 +334,23 @@ export default function ImagemIlimitada() {
             >
               <Zap className="w-12 h-12 text-blue-500" />
             </motion.div>
-
-            <motion.div
+            
+            <motion.div 
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="flex flex-col items-center gap-2"
             >
-              <div className="text-blue-600 font-bold uppercase tracking-widest text-sm mb-2">
-                Nossa solução:
-              </div>
+              <div className="text-blue-600 font-bold uppercase tracking-widest text-sm mb-2">Nossa solução:</div>
               <div className="text-5xl sm:text-7xl font-black text-zinc-900 bg-white px-8 py-5 rounded-3xl shadow-xl border border-blue-100 flex flex-col items-center">
-                R$ 5,90{" "}
-                <span className="text-lg font-bold text-green-500 uppercase tracking-widest mt-2 border-t border-zinc-100 pt-2 w-full">
-                  Uma única vez
-                </span>
+                R$ 5,90 <span className="text-lg font-bold text-green-500 uppercase tracking-widest mt-2 border-t border-zinc-100 pt-2 w-full">Uma única vez</span>
               </div>
             </motion.div>
+
           </div>
 
-          <motion.div
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -428,7 +365,7 @@ export default function ImagemIlimitada() {
       {/* DEPOIMENTOS */}
       <section className="py-24 px-4 sm:px-6 bg-white">
         <div className="max-w-6xl mx-auto text-center">
-          <motion.h2
+           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -451,9 +388,9 @@ export default function ImagemIlimitada() {
               {
                 text: "Melhor investimento que fiz para criar imagens.",
                 author: "Roberto",
-              },
+              }
             ].map((dep, i) => (
-              <motion.div
+              <motion.div 
                 key={i}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -462,16 +399,9 @@ export default function ImagemIlimitada() {
                 className="bg-zinc-50 border border-zinc-100 p-8 rounded-3xl flex flex-col items-center justify-center text-center shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="flex gap-1 mb-6">
-                  {[1, 2, 3, 4, 5].map((s) => (
-                    <Star
-                      key={s}
-                      className="w-6 h-6 text-yellow-400 fill-yellow-400"
-                    />
-                  ))}
+                  {[1,2,3,4,5].map(s => <Star key={s} className="w-6 h-6 text-yellow-400 fill-yellow-400" />)}
                 </div>
-                <p className="text-xl font-bold text-zinc-800 mb-6 italic">
-                  "{dep.text}"
-                </p>
+                <p className="text-xl font-bold text-zinc-800 mb-6 italic">"{dep.text}"</p>
                 {/* <div className="text-sm font-semibold text-zinc-500 uppercase tracking-widest">- {dep.author}</div> */}
               </motion.div>
             ))}
@@ -482,46 +412,44 @@ export default function ImagemIlimitada() {
       {/* GARANTIA */}
       <section className="py-20 px-4 sm:px-6 bg-zinc-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03]"></div>
-
+        
         <div className="max-w-4xl mx-auto rounded-3xl border border-zinc-700 bg-zinc-800/50 p-8 sm:p-12 text-center relative z-10 shadow-2xl backdrop-blur-sm flex flex-col sm:flex-row items-center gap-8">
+          
           <div className="bg-zinc-700/50 p-6 rounded-full flex-shrink-0 shadow-[0_0_50px_rgba(37,211,102,0.1)] border border-zinc-600">
             <Shield className="w-20 h-20 text-green-400" />
           </div>
 
           <div className="text-center sm:text-left">
-            <h2 className="text-3xl sm:text-4xl font-black mb-6 tracking-tight">
-              COMPRA 100% SEGURA
-            </h2>
-
+            <h2 className="text-3xl sm:text-4xl font-black mb-6 tracking-tight">COMPRA 100% SEGURA</h2>
+            
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
               <div className="flex items-center gap-2 font-semibold text-zinc-300">
                 <Check className="w-5 h-5 text-green-400" /> Pagamento Seguro
               </div>
               <div className="flex items-center gap-2 font-semibold text-zinc-300">
-                <Check className="w-5 h-5 text-green-400" /> Processado pela
-                Hotmart
+                <Check className="w-5 h-5 text-green-400" /> Processado pela Hotmart
               </div>
               <div className="flex items-center gap-2 font-semibold text-zinc-300">
                 <Check className="w-5 h-5 text-green-400" /> Ambiente protegido
               </div>
               <div className="flex items-center gap-2 font-semibold text-zinc-300">
-                <Check className="w-5 h-5 text-green-400" /> Garantia de
-                reembolso
+                <Check className="w-5 h-5 text-green-400" /> Garantia de reembolso
               </div>
             </div>
 
             <p className="text-zinc-400 text-sm leading-relaxed">
-              Se houver qualquer problema, você conta com a proteção e garantia
-              oferecida pela plataforma de pagamento.
+              Se houver qualquer problema, você conta com a proteção e garantia oferecida pela plataforma de pagamento.
             </p>
           </div>
+
         </div>
       </section>
 
       {/* CHAMADA FINAL */}
       <section className="py-24 sm:py-32 px-4 sm:px-6 bg-zinc-50 relative">
         <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
-          <motion.h2
+          
+          <motion.h2 
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -530,8 +458,8 @@ export default function ImagemIlimitada() {
           >
             APROVEITE AGORA
           </motion.h2>
-
-          <motion.p
+          
+          <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -540,8 +468,8 @@ export default function ImagemIlimitada() {
           >
             Comece hoje mesmo a criar imagens ilimitadas pagando apenas uma vez.
           </motion.p>
-
-          <motion.div
+          
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -550,8 +478,8 @@ export default function ImagemIlimitada() {
           >
             R$ 5,90
           </motion.div>
-
-          <motion.a
+          
+          <motion.a 
             href={checkoutUrl}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -569,6 +497,7 @@ export default function ImagemIlimitada() {
             <Shield className="w-5 h-5" />
             Pagamento 100% Seguro
           </div>
+
         </div>
       </section>
 
@@ -580,17 +509,12 @@ export default function ImagemIlimitada() {
             Pagamento Seguro via Hotmart
           </div>
           <div className="flex items-center gap-2">
-            <Infinity className="w-5 h-5 text-zinc-400" />
-            Acesso Vitalício
+             <Infinity className="w-5 h-5 text-zinc-400" />
+             Acesso Vitalício
           </div>
           <div>
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors flex items-center gap-2"
-            >
-              Suporte ao Cliente
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">
+               Suporte ao Cliente
             </a>
           </div>
           <div className="text-zinc-600">
@@ -599,7 +523,7 @@ export default function ImagemIlimitada() {
         </div>
       </footer>
 
-      <ChatWidget
+      <ChatWidget 
         message="Tem alguma dúvida sobre nosso pacote de geração de imagens com IA?"
         whatsappUrl="https://wa.me/5511988677214?text=Ol%C3%A1%2C%20estou%20com%20d%C3%BAvidas%20sobre%20o%20pacote%20da%20IA%20de%20Imagens!"
       />
