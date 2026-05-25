@@ -2,8 +2,7 @@ import { motion } from "motion/react";
 import { Zap, CheckCircle2, Package, Download, MessageCircle } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 
-import pendriveImg from "../assets/images/futuristic_pendrive.png";
-import pendriveImgMobile from "../assets/images/futuristic_pendrive2.png";
+import HeroFloatingLogos from "./HeroFloatingLogos";
 
 const models = [
   { name: "Llama 3", size: "8B / 70B", specialty: "Uso Geral & Raciocínio" },
@@ -147,21 +146,8 @@ export default function Hero() {
              <div className="w-[100%] h-[100%] border-[1px] border-purple-500/20 rounded-full absolute animate-[spin_15s_linear_infinite_reverse]" />
           </div>
 
-          <div className="relative z-10 glow-box rounded-[2rem] w-full flex flex-col items-center justify-center p-4 lg:p-8 aspect-square md:aspect-auto mt-8 lg:mt-0">
-            {/* The actual image for Mobile */}
-            <img 
-              src={pendriveImgMobile} 
-              alt="Pendrive IA Offline Futurista (Mobile)" 
-              className="lg:hidden w-full h-auto max-h-[60vh] object-contain rounded-[2rem] drop-shadow-[0_0_40px_rgba(0,255,255,0.4)] relative z-20" 
-              referrerPolicy="no-referrer" 
-            />
-            {/* The actual image for Desktop */}
-            <img 
-              src={pendriveImg} 
-              alt="Pendrive IA Offline Futurista (Desktop)" 
-              className="hidden lg:block w-full max-w-[400px] lg:max-w-[500px] h-auto object-contain rounded-2xl drop-shadow-[0_0_40px_rgba(0,255,255,0.4)] hover:scale-105 transition-transform duration-700 relative z-20" 
-              referrerPolicy="no-referrer" 
-            />
+          <div className="relative z-10 w-full flex flex-col items-center justify-center p-4 lg:p-8 aspect-square md:aspect-auto mt-8 lg:mt-0">
+            <HeroFloatingLogos />
           </div>
 
           {/* Carousel Cards floating around/below */}
