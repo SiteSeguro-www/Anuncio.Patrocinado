@@ -113,7 +113,7 @@ export default function Hero() {
             className="flex flex-col gap-4 max-w-md mx-auto lg:mx-0"
           >
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#planos" className="flex-1 px-8 py-5 bg-gradient-to-r from-[#00f0ff] to-blue-600 text-black text-xl font-bold rounded-2xl hover:scale-[1.03] transition-all duration-300 shadow-[0_0_40px_rgba(0,150,255,0.4)] flex items-center justify-center gap-3 relative overflow-hidden group text-center">
+              <a href="https://pay.hotmart.com/S105977865O" target="_blank" rel="noopener noreferrer" className="flex-1 px-8 py-5 bg-gradient-to-r from-[#00f0ff] to-blue-600 text-black text-xl font-bold rounded-2xl hover:scale-[1.03] transition-all duration-300 shadow-[0_0_40px_rgba(0,150,255,0.4)] flex items-center justify-center gap-3 relative overflow-hidden group text-center">
                 <span className="absolute inset-0 w-full h-full bg-white/20 -skew-x-12 -translate-x-full group-hover:animate-[shine_1.5s_infinite]"></span>
                 🔥 COMPRAR AGORA
               </a>
