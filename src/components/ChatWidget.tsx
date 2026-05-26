@@ -19,10 +19,10 @@ export default function ChatWidget({
         className={`bg-zinc-900 border border-zinc-800 rounded-2xl shadow-2xl w-[calc(100vw-2rem)] sm:w-96 overflow-hidden flex flex-col transition-all duration-300 origin-bottom-right mb-4 ${isOpen ? 'scale-100 opacity-100' : 'scale-0 opacity-0 hidden'}`}
       >
         {/* Header */}
-        <div className="bg-[#25D366] p-4 flex items-center justify-between">
+        <div className="bg-gradient-to-r from-blue-400 via-blue-600 to-indigo-800 p-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-              <MessageCircle className="w-6 h-6 text-white" />
+            <div className="w-10 h-10 relative overflow-hidden rounded-full cursor-default">
+              <img src="/logo%20whatsapp.png" alt="WhatsApp" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[190%] h-[190%] max-w-none object-contain" />
             </div>
             <div>
               <h3 className="text-white font-bold text-lg leading-tight">Atendimento</h3>
@@ -93,10 +93,10 @@ export default function ChatWidget({
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full p-4 shadow-[0_0_20px_rgba(37,211,102,0.4)] transition-all duration-300 hover:scale-110 flex items-center justify-center animate-bounce origin-center"
+          className="bg-gradient-to-br from-cyan-300 via-blue-500 to-indigo-800 text-white rounded-full w-14 h-14 sm:w-16 sm:h-16 shadow-[0_0_25px_rgba(59,130,246,0.6)] transition-all duration-300 hover:scale-110 flex items-center justify-center animate-bounce origin-center relative overflow-hidden"
           aria-label="Atendimento via WhatsApp"
         >
-          <MessageCircle className="w-8 h-8" />
+          <img src="/logo%20whatsapp.png" alt="WhatsApp" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[190%] h-[190%] max-w-none object-contain" />
         </button>
       )}
     </div>

@@ -118,7 +118,10 @@ export default function Hero() {
                 🔥 COMPRAR AGORA
               </a>
               <a href="https://wa.me/5511988677214?text=Ol%C3%A1%2C%20acabei%20de%20comprar%20a%20Central%20de%20IA%20Offline!" target="_blank" rel="noopener noreferrer" className="px-6 py-5 bg-[#25D366] text-white text-lg font-bold rounded-2xl hover:scale-[1.03] transition-all duration-300 shadow-[0_0_30px_rgba(37,211,102,0.4)] flex items-center justify-center gap-3 whitespace-nowrap">
-                <MessageCircle className="w-6 h-6" /> Suporte
+                <div className="relative w-8 h-8 overflow-hidden rounded-full">
+                  <img src="/logo%20whatsapp.png" alt="WhatsApp" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[190%] h-[190%] max-w-none object-contain" />
+                </div>
+                Suporte
               </a>
             </div>
             <div className="flex flex-col gap-4">
