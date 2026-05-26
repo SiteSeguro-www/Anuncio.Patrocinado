@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 import Hero from './components/Hero';
+import VideoSection from './components/VideoSection';
 import Features from './components/Features';
 import Comparison from './components/Comparison';
 import PricingOptions from './components/PricingOptions';
@@ -18,6 +19,7 @@ export default function App() {
     <>
       <main className="min-h-screen bg-zinc-950 font-sans selection:bg-blue-500/30 overflow-x-hidden w-full max-w-[100vw]">
         <Hero />
+        <VideoSection className="bg-zinc-950 !pt-0" />
         <Features />
         <Comparison />
         <PricingOptions />

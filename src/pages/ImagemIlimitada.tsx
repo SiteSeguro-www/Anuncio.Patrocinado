@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Check, X, Shield, Star, Image as ImageIcon, Zap, Infinity, CreditCard, Sparkles, MonitorSmartphone } from "lucide-react";
 import FloatingGallery from "../components/FloatingGallery";
 import ChatWidget from "../components/ChatWidget";
+import VideoSection from "../components/VideoSection";
 
 export default function ImagemIlimitada() {
   const whatsappUrl = "https://wa.me/5511988677214?text=Ol%C3%A1%2C%20quero%20acesso%20%C3%A0%20IA%20de%20Imagens!";
@@ -102,6 +103,8 @@ export default function ImagemIlimitada() {
 
         </div>
       </section>
+
+      <VideoSection className="bg-zinc-900 !pt-0" />
 
       {/* DOR DO CLIENTE */}
       <section className="py-24 px-4 sm:px-6 bg-zinc-50 relative overflow-hidden">
