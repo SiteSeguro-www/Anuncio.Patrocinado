@@ -10,13 +10,6 @@ export default function ImagemIlimitada() {
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-blue-500/30 text-zinc-900 overflow-x-hidden w-full max-w-[100vw]">
       
-      {/* Top Banners */}
-      <div className="w-full z-50 flex flex-col fixed top-0 left-0">
-        <div className="bg-[#009EE3] text-white text-center py-2 px-2 sm:px-4 font-bold text-[11px] sm:text-sm tracking-wide flex justify-center items-center gap-2 shadow-sm border-b border-[#008ACB] leading-tight">
-          <span className="w-full break-words">🤝 Garantia de 7 Dias - Compra Segura Hotmart Garante Seu Dinheiro De Volta</span>
-        </div>
-      </div>
-
       {/* HERO SECTION */}
       <section className="relative pt-28 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-zinc-900 text-white">
         <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12">
