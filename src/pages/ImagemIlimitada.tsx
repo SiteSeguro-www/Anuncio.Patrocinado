@@ -49,10 +49,10 @@ export default function ImagemIlimitada() {
                 className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700 p-6 rounded-2xl w-full sm:w-auto"
               >
                 <div className="flex flex-col items-center sm:items-start gap-1 mb-4">
-                  <span className="text-zinc-400 line-through text-lg font-medium">DE R$ 97,00</span>
+                  <div className="text-zinc-400 line-through text-lg font-medium">DE R$ 97,00</div>
                   <div className="text-white text-xl">POR APENAS</div>
                   <div className="text-5xl sm:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
-                    R$ 5,90
+                    R$ 12,90
                   </div>
                 </div>
                 
@@ -344,7 +344,7 @@ export default function ImagemIlimitada() {
             >
               <div className="text-blue-600 font-bold uppercase tracking-widest text-sm mb-2">Nossa solução:</div>
               <div className="text-5xl sm:text-7xl font-black text-zinc-900 bg-white px-8 py-5 rounded-3xl shadow-xl border border-blue-100 flex flex-col items-center">
-                R$ 5,90 <span className="text-lg font-bold text-green-500 uppercase tracking-widest mt-2 border-t border-zinc-100 pt-2 w-full">Uma única vez</span>
+                R$ 12,90 <span className="text-lg font-bold text-green-500 uppercase tracking-widest mt-2 border-t border-zinc-100 pt-2 w-full">Uma única vez</span>
               </div>
             </motion.div>
 
@@ -476,7 +476,7 @@ export default function ImagemIlimitada() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-7xl sm:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-500 mb-12 drop-shadow-sm"
           >
-            R$ 5,90
+            R$ 12,90
           </motion.div>
           
           <motion.a 
