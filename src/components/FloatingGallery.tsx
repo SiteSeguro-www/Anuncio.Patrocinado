@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-const ALL_IMAGES = Array.from({ length: 40 }, (_, i) => i === 0 ? "/ia.jpeg" : `/ia${i + 1}.jpeg`);
+const ALL_IMAGES = Array.from({ length: 48 }, (_, i) => i === 0 ? "/ia.jpeg" : `/ia${i + 1}.jpeg`);
 
 // Simple shuffle
 for (let i = ALL_IMAGES.length - 1; i > 0; i--) {
