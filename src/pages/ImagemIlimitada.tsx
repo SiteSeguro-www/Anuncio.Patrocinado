@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import FloatingGallery from "../components/FloatingGallery";
 import ChatWidget from "../components/ChatWidget";
-import VideoSection from "../components/VideoSection";
+import ImageCarouselSection from "../components/ImageCarouselSection";
 
 export default function ImagemIlimitada() {
   const whatsappUrl =
@@ -167,7 +167,7 @@ export default function ImagemIlimitada() {
         </div>
       </section>
 
-      <VideoSection className="bg-zinc-900 !pt-0" />
+      <ImageCarouselSection className="bg-zinc-900 !pt-0" />
 
       {/* DOR DO CLIENTE */}
       <section className="py-24 px-4 sm:px-6 bg-zinc-50 relative overflow-hidden">
