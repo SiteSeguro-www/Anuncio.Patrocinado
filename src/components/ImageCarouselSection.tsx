@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const MEDIA = [
-  { type: 'video', src: '/carousel-video.mp4' },
+  { type: 'video', src: '/video.mp4' },
   { type: 'image', src: '/ia41.jpeg' },
   { type: 'image', src: '/ia42.jpeg' },
   { type: 'image', src: '/ia43.jpeg' },
