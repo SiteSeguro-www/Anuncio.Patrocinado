@@ -19,7 +19,7 @@ import ImageCarouselSection from "../components/ImageCarouselSection";
 export default function ImagemIlimitada() {
   const whatsappUrl =
     "https://wa.me/5511988677214?text=Ol%C3%A1%2C%20quero%20acesso%20%C3%A0%20IA%20de%20Imagens!";
-  const checkoutUrl = "https://pay.hotmart.com/C105976185J";
+  const checkoutUrl = "https://mpago.la/33tWczi";
 
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-blue-500/30 text-zinc-900 overflow-x-hidden w-full max-w-[100vw]">
@@ -137,7 +137,7 @@ export default function ImagemIlimitada() {
                   </div>
                   <div className="bg-black text-white text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1 w-max">
                     <Shield className="w-3 h-3 text-red-500 fill-current" />{" "}
-                    COMPRA SEGURA HOTMART
+                    COMPRA SEGURA MERCADO PAGO
                   </div>
                 </div>
               </motion.div>
@@ -151,17 +151,20 @@ export default function ImagemIlimitada() {
             >
               <a
                 href={checkoutUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-bold text-xl sm:text-2xl py-4 sm:py-5 px-8 sm:px-12 rounded-2xl shadow-[0_0_40px_rgba(37,99,235,0.4)] hover:shadow-[0_0_60px_rgba(37,99,235,0.6)] transition-all duration-300 hover:scale-105"
               >
                 QUERO ACESSO AGORA
               </a>
               <div className="flex flex-col text-center sm:text-left bg-blue-900/30 border border-blue-500/20 py-2 sm:py-3 px-4 sm:px-5 rounded-xl border-dashed">
-                 <span className="text-emerald-400 font-bold text-xs sm:text-sm mb-0.5 uppercase tracking-wider flex items-center justify-center sm:justify-start gap-1">
-                   <Gift className="w-4 h-4" /> Bônus Exclusivo
-                 </span>
-                 <span className="text-white font-bold text-sm sm:text-base leading-tight">
-                   Pacote Para Usar iA<br className="hidden sm:block" /> Offline Sem Limites
-                 </span>
+                <span className="text-emerald-400 font-bold text-xs sm:text-sm mb-0.5 uppercase tracking-wider flex items-center justify-center sm:justify-start gap-1">
+                  <Gift className="w-4 h-4" /> Bônus Exclusivo
+                </span>
+                <span className="text-white font-bold text-sm sm:text-base leading-tight">
+                  Pacote Para Usar iA
+                  <br className="hidden sm:block" /> Offline Sem Limites
+                </span>
               </div>
             </motion.div>
           </div>
@@ -524,7 +527,7 @@ export default function ImagemIlimitada() {
               </div>
               <div className="flex items-center gap-2 font-semibold text-zinc-300">
                 <Check className="w-5 h-5 text-green-400" /> Processado pela
-                Hotmart
+                Mercado Pago
               </div>
               <div className="flex items-center gap-2 font-semibold text-zinc-300">
                 <Check className="w-5 h-5 text-green-400" /> Ambiente protegido
@@ -578,6 +581,8 @@ export default function ImagemIlimitada() {
 
           <motion.a
             href={checkoutUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -602,7 +607,7 @@ export default function ImagemIlimitada() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-zinc-500 text-sm font-semibold">
           <div className="flex items-center gap-2">
             <CreditCard className="w-5 h-5 text-zinc-400" />
-            Pagamento Seguro via Hotmart
+            Pagamento Seguro via Mercado Pago
           </div>
           <div className="flex items-center gap-2">
             <Infinity className="w-5 h-5 text-zinc-400" />
