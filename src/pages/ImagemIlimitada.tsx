@@ -10,6 +10,7 @@ import {
   CreditCard,
   Sparkles,
   MonitorSmartphone,
+  Gift,
 } from "lucide-react";
 import FloatingGallery from "../components/FloatingGallery";
 import ChatWidget from "../components/ChatWidget";
@@ -146,13 +147,22 @@ export default function ImagemIlimitada() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
+              className="flex flex-col sm:flex-row items-center gap-4"
             >
               <a
                 href={checkoutUrl}
-                className="block w-full sm:inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-bold text-xl sm:text-2xl py-4 sm:py-5 px-8 sm:px-12 rounded-2xl shadow-[0_0_40px_rgba(37,99,235,0.4)] hover:shadow-[0_0_60px_rgba(37,99,235,0.6)] transition-all duration-300 hover:scale-105"
+                className="w-full sm:w-auto inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-bold text-xl sm:text-2xl py-4 sm:py-5 px-8 sm:px-12 rounded-2xl shadow-[0_0_40px_rgba(37,99,235,0.4)] hover:shadow-[0_0_60px_rgba(37,99,235,0.6)] transition-all duration-300 hover:scale-105"
               >
                 QUERO ACESSO AGORA
               </a>
+              <div className="flex flex-col text-center sm:text-left bg-blue-900/30 border border-blue-500/20 py-2 sm:py-3 px-4 sm:px-5 rounded-xl border-dashed">
+                 <span className="text-emerald-400 font-bold text-xs sm:text-sm mb-0.5 uppercase tracking-wider flex items-center justify-center sm:justify-start gap-1">
+                   <Gift className="w-4 h-4" /> Bônus Exclusivo
+                 </span>
+                 <span className="text-white font-bold text-sm sm:text-base leading-tight">
+                   Pacote Para Usar iA<br className="hidden sm:block" /> Offline Sem Limites
+                 </span>
+              </div>
             </motion.div>
           </div>
 
