@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   Check,
   X,
@@ -157,7 +158,7 @@ export default function ImagemIlimitada() {
               >
                 QUERO ACESSO AGORA
               </a>
-              <div className="flex flex-col text-center sm:text-left bg-blue-900/30 border border-blue-500/20 py-2 sm:py-3 px-4 sm:px-5 rounded-xl border-dashed">
+              <Link to="/" className="flex flex-col text-center sm:text-left bg-blue-900/30 border border-blue-500/20 py-2 sm:py-3 px-4 sm:px-5 rounded-xl border-dashed hover:bg-blue-800/40 transition-colors">
                 <span className="text-emerald-400 font-bold text-xs sm:text-sm mb-0.5 uppercase tracking-wider flex items-center justify-center sm:justify-start gap-1">
                   <Gift className="w-4 h-4" /> Bônus Exclusivo
                 </span>
@@ -165,7 +166,7 @@ export default function ImagemIlimitada() {
                   Pacote Para Usar iA
                   <br className="hidden sm:block" /> Offline Sem Limites
                 </span>
-              </div>
+              </Link>
             </motion.div>
           </div>
 
