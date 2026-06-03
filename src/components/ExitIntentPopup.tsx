@@ -65,7 +65,8 @@ export default function ExitIntentPopup() {
                   <span className="font-bold text-white text-xl">Chame agora no WhatsApp</span>
                   <br />e comprando agora você ganha <br />
                   <span className="text-emerald-400 font-extrabold text-2xl inline-block mt-2 drop-shadow-[0_0_10px_rgba(52,211,153,0.3)]">10% de DESCONTO</span>
-                  <br /><span className="text-white font-bold inline-block mt-1">+ BÔNUS EXCLUSIVOS!</span>
+                  <br /><span className="text-white font-bold inline-block mt-4">+ BÔNUS EXCLUSIVO!</span>
+                  <br /><span className="text-[#00f0ff] font-extrabold text-lg inline-block mt-1 bg-blue-900/40 px-3 py-1 rounded-lg border border-blue-500/30">Pacote Para Usar iA Offline Sem Limites</span>
                 </p>
               </div>
 
