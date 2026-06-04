@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <footer className="bg-[#030303] py-12 border-t border-zinc-900 border-dashed">
@@ -5,10 +7,12 @@ export default function Footer() {
         <div className="text-zinc-500 text-sm">
           &copy; {new Date().getFullYear()} Pacote Inteligência Artificial Local. Todos os direitos reservados.
         </div>
-        <div className="flex items-center gap-6 text-sm text-zinc-500">
-          <a href="#" className="hover:text-zinc-300 transition-colors">Termos de Uso</a>
-          <a href="#" className="hover:text-zinc-300 transition-colors">Política de Privacidade</a>
-          <a href="#" className="hover:text-zinc-300 transition-colors">Suporte ao Cliente</a>
+        <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-zinc-500">
+          <Link to="/termos-de-uso" className="hover:text-zinc-300 transition-colors">Termos de Uso</Link>
+          <Link to="/politica-de-privacidade" className="hover:text-zinc-300 transition-colors">Política de Privacidade</Link>
+          <Link to="/sobre-nos" className="hover:text-zinc-300 transition-colors">Sobre Nós</Link>
+          <Link to="/contato" className="hover:text-zinc-300 transition-colors">Contato</Link>
+          <Link to="/faq" className="hover:text-zinc-300 transition-colors">Dúvidas Frequentes (FAQ)</Link>
         </div>
       </div>
     </footer>
