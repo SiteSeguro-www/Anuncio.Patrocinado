@@ -10,7 +10,7 @@ export default function WhoIsItFor() {
     "Designers",
     "Estudantes",
     "Pesquisadores",
-    "Autônomos"
+    "Autônomos",
   ];
 
   return (
@@ -22,7 +22,7 @@ export default function WhoIsItFor() {
 
         <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
           {audiences.map((item, idx) => (
-            <motion.div 
+            <motion.div
               key={idx}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}

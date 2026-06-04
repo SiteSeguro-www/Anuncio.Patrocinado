@@ -1,20 +1,24 @@
-import { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const MEDIA = [
-  { type: 'video', src: '/video.mp4' },
-  { type: 'image', src: '/ia41.jpeg' },
-  { type: 'image', src: '/ia42.jpeg' },
-  { type: 'image', src: '/ia43.jpeg' },
-  { type: 'image', src: '/ia44.jpeg' },
-  { type: 'image', src: '/ia45.jpeg' },
-  { type: 'image', src: '/ia46.jpeg' },
-  { type: 'image', src: '/ia47.jpeg' },
-  { type: 'image', src: '/ia48.jpeg' },
+  { type: "video", src: "/video.mp4" },
+  { type: "image", src: "/ia41.jpeg" },
+  { type: "image", src: "/ia42.jpeg" },
+  { type: "image", src: "/ia43.jpeg" },
+  { type: "image", src: "/ia44.jpeg" },
+  { type: "image", src: "/ia45.jpeg" },
+  { type: "image", src: "/ia46.jpeg" },
+  { type: "image", src: "/ia47.jpeg" },
+  { type: "image", src: "/ia48.jpeg" },
 ];
 
-export default function ImageCarouselSection({ className = "bg-zinc-950" }: { className?: string }) {
+export default function ImageCarouselSection({
+  className = "bg-zinc-950",
+}: {
+  className?: string;
+}) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextImage = () => {
@@ -26,15 +30,16 @@ export default function ImageCarouselSection({ className = "bg-zinc-950" }: { cl
   };
 
   return (
-    <section className={`py-12 sm:py-20 px-4 sm:px-6 lg:px-8 w-full ${className}`}>
+    <section
+      className={`py-12 sm:py-20 px-4 sm:px-6 lg:px-8 w-full ${className}`}
+    >
       <div className="max-w-5xl mx-auto w-full">
         <div className="relative w-full aspect-square sm:aspect-[4/3] md:aspect-video rounded-2xl md:rounded-[32px] overflow-hidden bg-zinc-900 border border-zinc-800 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] group">
-          
           <div className="absolute inset-0 bg-gradient-to-br from-[#00f0ff]/10 to-blue-600/10 mix-blend-overlay z-10 pointer-events-none"></div>
-          
+
           <div className="relative w-full h-full text-zinc-400 group-hover:text-white transition-colors duration-300">
             <AnimatePresence mode="wait">
-              {MEDIA[currentIndex].type === 'video' ? (
+              {MEDIA[currentIndex].type === "video" ? (
                 <motion.video
                   key="video"
                   src={MEDIA[currentIndex].src}
@@ -62,7 +67,7 @@ export default function ImageCarouselSection({ className = "bg-zinc-950" }: { cl
               )}
             </AnimatePresence>
           </div>
-          
+
           {/* Controls */}
           <button
             onClick={prevImage}
@@ -71,7 +76,7 @@ export default function ImageCarouselSection({ className = "bg-zinc-950" }: { cl
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
-          
+
           <button
             onClick={nextImage}
             className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 bg-black/50 hover:bg-black/80 text-white rounded-full flex items-center justify-center backdrop-blur-sm border border-white/10 transition-all shadow-lg hover:scale-110"
@@ -87,13 +92,14 @@ export default function ImageCarouselSection({ className = "bg-zinc-950" }: { cl
                 key={idx}
                 onClick={() => setCurrentIndex(idx)}
                 className={`w-2.5 h-2.5 rounded-full transition-all ${
-                  idx === currentIndex ? "bg-white scale-125 shadow-[0_0_10px_rgba(255,255,255,0.8)]" : "bg-white/40 hover:bg-white/60"
+                  idx === currentIndex
+                    ? "bg-white scale-125 shadow-[0_0_10px_rgba(255,255,255,0.8)]"
+                    : "bg-white/40 hover:bg-white/60"
                 }`}
                 aria-label={`Ir para o item ${idx + 1}`}
               />
             ))}
           </div>
-
         </div>
       </div>
     </section>

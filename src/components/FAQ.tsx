@@ -8,32 +8,39 @@ export default function FAQ() {
   const faqs = [
     {
       question: "Funciona sem internet?",
-      answer: "Sim, 100%. Após instalar o modelo desejado no seu computador, você nunca mais precisará de conexão com a rede para utilizá-lo."
+      answer:
+        "Sim, 100%. Após instalar o modelo desejado no seu computador, você nunca mais precisará de conexão com a rede para utilizá-lo.",
     },
     {
       question: "Preciso pagar mensalidade?",
-      answer: "Não. A solução tem pagamento único. Acabe para sempre com as assinaturas mensais."
+      answer:
+        "Não. A solução tem pagamento único. Acabe para sempre com as assinaturas mensais.",
     },
     {
       question: "Tem limite de uso?",
-      answer: "Zero limites. Como você está rodando as IAs no seu próprio hardware, não há restrições de número de mensagens, nem 'tokens/minuto' limitando sua velocidade de raciocínio ou análise de PDFs."
+      answer:
+        "Zero limites. Como você está rodando as IAs no seu próprio hardware, não há restrições de número de mensagens, nem 'tokens/minuto' limitando sua velocidade de raciocínio ou análise de PDFs.",
     },
     {
       question: "Posso instalar novos modelos?",
-      answer: "Sim! A ferramenta age como uma central flexível, permitindo que você adicione quase qualquer formato de LLM open-source recém-lançado na comunidade."
+      answer:
+        "Sim! A ferramenta age como uma central flexível, permitindo que você adicione quase qualquer formato de LLM open-source recém-lançado na comunidade.",
     },
     {
       question: "Funciona em Windows?",
-      answer: "Sim, é totalmente compatível com Windows moderno (10/11), e também roda no Mac."
+      answer:
+        "Sim, é totalmente compatível com Windows moderno (10/11), e também roda no Mac.",
     },
     {
       question: "Preciso de placa de vídeo?",
-      answer: "Modelos pequenos (Phi, Gemma) rodam bem utilizando apenas a memória RAM e a CPU do próprio computador/notebook. Para modelos muito avançados (Llama 70B, etc), é recomendável ter uma placa de vídeo."
+      answer:
+        "Modelos pequenos (Phi, Gemma) rodam bem utilizando apenas a memória RAM e a CPU do próprio computador/notebook. Para modelos muito avançados (Llama 70B, etc), é recomendável ter uma placa de vídeo.",
     },
     {
       question: "Posso usar para criar conteúdo?",
-      answer: "É excelente para criadores! Como você não perde tokens por mensagem, você pode gerar centenas de ideias, roteiros de YouTube, artigos de blog e postagens em segundos até encontrar algo perfeito."
-    }
+      answer:
+        "É excelente para criadores! Como você não perde tokens por mensagem, você pode gerar centenas de ideias, roteiros de YouTube, artigos de blog e postagens em segundos até encontrar algo perfeito.",
+    },
   ];
 
   return (
@@ -45,7 +52,7 @@ export default function FAQ() {
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -57,12 +64,14 @@ export default function FAQ() {
                 className="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <span className="font-bold text-zinc-200 text-lg">{faq.question}</span>
-                <ChevronDown 
-                  className={`w-5 h-5 text-zinc-500 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`} 
+                <span className="font-bold text-zinc-200 text-lg">
+                  {faq.question}
+                </span>
+                <ChevronDown
+                  className={`w-5 h-5 text-zinc-500 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`}
                 />
               </button>
-              
+
               <AnimatePresence>
                 {openIndex === index && (
                   <motion.div

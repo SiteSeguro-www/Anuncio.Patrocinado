@@ -16,6 +16,7 @@ import {
 import FloatingGallery from "../components/FloatingGallery";
 import ChatWidget from "../components/ChatWidget";
 import ImageCarouselSection from "../components/ImageCarouselSection";
+import Footer from "../components/Footer";
 
 export default function ImagemIlimitada() {
   const whatsappUrl =
@@ -158,7 +159,10 @@ export default function ImagemIlimitada() {
               >
                 QUERO ACESSO AGORA
               </a>
-              <Link to="/" className="flex flex-col text-center sm:text-left bg-blue-900/30 border border-blue-500/20 py-2 sm:py-3 px-4 sm:px-5 rounded-xl border-dashed hover:bg-blue-800/40 transition-colors">
+              <Link
+                to="/"
+                className="flex flex-col text-center sm:text-left bg-blue-900/30 border border-blue-500/20 py-2 sm:py-3 px-4 sm:px-5 rounded-xl border-dashed hover:bg-blue-800/40 transition-colors"
+              >
                 <span className="text-emerald-400 font-bold text-xs sm:text-sm mb-0.5 uppercase tracking-wider flex items-center justify-center sm:justify-start gap-1">
                   <Gift className="w-4 h-4" /> Bônus Exclusivo
                 </span>
@@ -603,32 +607,7 @@ export default function ImagemIlimitada() {
         </div>
       </section>
 
-      {/* RODAPÉ */}
-      <footer className="bg-zinc-950 py-12 px-4 sm:px-6 border-t border-zinc-900">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-zinc-500 text-sm font-semibold">
-          <div className="flex items-center gap-2">
-            <CreditCard className="w-5 h-5 text-zinc-400" />
-            Pagamento Seguro via Mercado Pago
-          </div>
-          <div className="flex items-center gap-2">
-            <Infinity className="w-5 h-5 text-zinc-400" />
-            Acesso Vitalício
-          </div>
-          <div>
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors flex items-center gap-2"
-            >
-              Suporte ao Cliente
-            </a>
-          </div>
-          <div className="text-zinc-600">
-            &copy; {new Date().getFullYear()} Todos os Direitos Reservados
-          </div>
-        </div>
-      </footer>
+      <Footer />
 
       <ChatWidget
         message="Tem alguma dúvida sobre nosso pacote de geração de imagens com IA?"
