@@ -9,7 +9,7 @@ export default function MantaTermica() {
   // Placeholders for user's uploaded images/video.
   // We'll use some placeholder names, the user should upload these to /public
   const media = [
-    { type: "video", src: "/manta-video.mp4" },
+    { type: "video", src: "/manta-video.mp4", poster: "/manta1.webp" },
     { type: "image", src: "/manta1.webp" },
     { type: "image", src: "/manta2.webp" },
     { type: "image", src: "/manta3.webp" },
@@ -47,7 +47,8 @@ export default function MantaTermica() {
             <div className="w-full aspect-square bg-zinc-100 flex items-center justify-center relative md:rounded-lg overflow-hidden">
               {media[currentMedia].type === 'video' ? (
                 <video 
-                  src={media[currentMedia].src} 
+                  src={media[currentMedia].src}
+                  poster={media[currentMedia].poster}
                   controls 
                   autoPlay 
                   muted 
@@ -80,8 +81,17 @@ export default function MantaTermica() {
                   className={`w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-md border-2 overflow-hidden flex items-center justify-center bg-zinc-100 relative ${currentMedia === idx ? 'border-blue-500' : 'border-transparent'}`}
                 >
                   {item.type === 'video' ? (
-                    <div className="w-full h-full bg-zinc-200 flex items-center justify-center text-xs font-bold text-zinc-500">
-                      VIDEO
+                    <div className="w-full h-full relative">
+                      <img 
+                        src={item.poster} 
+                        alt="Video Thumbnail" 
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+                        <div className="w-6 h-6 rounded-full bg-black/60 flex items-center justify-center">
+                          <div className="w-0 h-0 border-t-[4px] border-t-transparent border-l-[6px] border-l-white border-b-[4px] border-b-transparent ml-[2px]" />
+                        </div>
+                      </div>
                     </div>
                   ) : (
                     <img 
