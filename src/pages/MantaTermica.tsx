@@ -1,10 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Search, Menu, ShoppingCart, Star, Heart, Check, ShieldCheck, Truck, ArrowLeft } from "lucide-react";
 import Footer from "../components/Footer";
 
 export default function MantaTermica() {
   const [currentMedia, setCurrentMedia] = useState(0);
+
+  useEffect(() => {
+    document.title = "Manta Térmica Ajustável para Cães e Gatos | Compra Garantida";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "Manta térmica ajustável e impermeável para animais de estimação. Fornece calor para recém-nascidos, grávidas e alivia dores articulares.");
+    }
+  }, []);
 
   // Placeholders for user's uploaded images/video.
   // We'll use some placeholder names, the user should upload these to /public

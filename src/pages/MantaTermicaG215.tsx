@@ -1,10 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Search, Menu, ShoppingCart, Star, Heart, Check, ShieldCheck, Truck, ArrowLeft } from "lucide-react";
 import Footer from "../components/Footer";
 
 export default function MantaTermicaG215() {
   const [currentMedia, setCurrentMedia] = useState(0);
+
+  useEffect(() => {
+    document.title = "Cama Térmica Ajustável Para Cães G215 Com Controle De Temper";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "Cama Térmica Ajustável Para Cães G215. Múltipla camada estrutura de proteção com aquecimento seguro, fornece calor ao recém-nascido e alivia dores.");
+    }
+  }, []);
 
   const media = [
     { type: "image", src: "/manta-1.webp" },
