@@ -9,10 +9,10 @@ export default function MantaTermica() {
   // Placeholders for user's uploaded images/video.
   // We'll use some placeholder names, the user should upload these to /public
   const media = [
+    { type: "video", src: "/manta-video.mp4" },
     { type: "image", src: "/manta1.webp" },
     { type: "image", src: "/manta2.webp" },
     { type: "image", src: "/manta3.webp" },
-    { type: "video", src: "/manta-video.mp4" },
   ];
 
   return (
@@ -23,15 +23,15 @@ export default function MantaTermica() {
           <Link to="/" className="text-zinc-800 p-1 md:hidden">
             <ArrowLeft className="w-6 h-6" />
           </Link>
-          <div className="flex-1 bg-white rounded-full flex items-center px-4 py-2 shadow-sm">
+          <a href="https://meli.la/1FaArfg" target="_blank" rel="noopener noreferrer" className="flex-1 bg-white rounded-full flex items-center px-4 py-2 shadow-sm cursor-pointer">
             <Search className="w-5 h-5 text-zinc-400" />
             <input 
               type="text" 
               placeholder="Buscar produtos, marcas e muito mais..." 
-              className="w-full bg-transparent outline-none ml-2 text-zinc-700 text-sm"
+              className="w-full bg-transparent outline-none ml-2 text-zinc-700 text-sm cursor-pointer pointer-events-none"
               readOnly
             />
-          </div>
+          </a>
           <Menu className="w-6 h-6 text-zinc-800 md:hidden" />
           <ShoppingCart className="w-6 h-6 text-zinc-800 hidden md:block" />
         </div>
@@ -51,6 +51,7 @@ export default function MantaTermica() {
                   controls 
                   autoPlay 
                   muted 
+                  loop
                   playsInline
                   className="w-full h-full object-contain"
                 />

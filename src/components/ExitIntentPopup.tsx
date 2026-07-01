@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Gift } from "lucide-react";
+import { X, Gift, ShoppingCart } from "lucide-react";
+import { useLocation } from "react-router-dom";
 
 export default function ExitIntentPopup() {
   const [isOpen, setIsOpen] = useState(false);
   const [hasShown, setHasShown] = useState(false);
+  const location = useLocation();
+  const isMantaTermica = location.pathname === "/manta-termica";
 
   useEffect(() => {
     const handleMouseLeave = (e: MouseEvent) => {
@@ -62,41 +65,70 @@ export default function ExitIntentPopup() {
               </h2>
 
               <div className="bg-zinc-800/50 border border-zinc-700/50 rounded-2xl p-4 sm:p-6 mb-6 sm:mb-8 mt-2 w-full">
-                <p className="text-base sm:text-lg text-zinc-300">
-                  <span className="font-bold text-white text-lg sm:text-xl">
-                    Chame agora no WhatsApp
-                  </span>
-                  <br />e comprando agora você ganha <br />
-                  <span className="text-emerald-400 font-extrabold text-xl sm:text-2xl inline-block mt-2 drop-shadow-[0_0_10px_rgba(52,211,153,0.3)]">
-                    10% de DESCONTO
-                  </span>
-                  <br />
-                  <span className="text-white font-bold inline-block mt-2 sm:mt-4">
-                    + BÔNUS EXCLUSIVO!
-                  </span>
-                  <br />
-                  <span className="text-[#00f0ff] font-extrabold text-[12px] sm:text-lg inline-block mt-1 bg-blue-900/40 px-2 sm:px-3 py-1 rounded-lg border border-blue-500/30">
-                    Pacote Para Usar iA Offline Sem Limites
-                  </span>
-                </p>
+                {isMantaTermica ? (
+                  <p className="text-base sm:text-lg text-zinc-300">
+                    <span className="font-bold text-white text-lg sm:text-xl">
+                      Cama Térmica Ajustável Para Cães G215 Com Controle De Temper
+                    </span>
+                    <br /><br />
+                    <span className="text-white text-4xl font-extrabold">
+                      R$ 67,63
+                    </span>
+                    <br />
+                    <span className="text-emerald-400 font-bold text-xl inline-block mt-1">
+                      12x R$ 6,66
+                    </span>
+                  </p>
+                ) : (
+                  <p className="text-base sm:text-lg text-zinc-300">
+                    <span className="font-bold text-white text-lg sm:text-xl">
+                      Chame agora no WhatsApp
+                    </span>
+                    <br />e comprando agora você ganha <br />
+                    <span className="text-emerald-400 font-extrabold text-xl sm:text-2xl inline-block mt-2 drop-shadow-[0_0_10px_rgba(52,211,153,0.3)]">
+                      10% de DESCONTO
+                    </span>
+                    <br />
+                    <span className="text-white font-bold inline-block mt-2 sm:mt-4">
+                      + BÔNUS EXCLUSIVO!
+                    </span>
+                    <br />
+                    <span className="text-[#00f0ff] font-extrabold text-[12px] sm:text-lg inline-block mt-1 bg-blue-900/40 px-2 sm:px-3 py-1 rounded-lg border border-blue-500/30">
+                      Pacote Para Usar iA Offline Sem Limites
+                    </span>
+                  </p>
+                )}
               </div>
 
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setIsOpen(false)}
-                className="w-full relative overflow-hidden group py-3 sm:py-4 px-4 sm:px-6 bg-[#25D366] text-white text-sm sm:text-lg font-bold rounded-xl hover:scale-[1.02] transition-all duration-300 shadow-[0_0_30px_rgba(37,211,102,0.4)] flex items-center justify-center gap-2 sm:gap-3"
-              >
-                <div className="relative w-6 h-6 sm:w-8 sm:h-8 overflow-hidden rounded-full shrink-0">
-                  <img
-                    src="/logo%20whatsapp.png"
-                    alt="WhatsApp"
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[190%] h-[190%] max-w-none object-contain"
-                  />
-                </div>
-                EU QUERO MEU DESCONTO AGORA
-              </a>
+              {isMantaTermica ? (
+                <a
+                  href="https://meli.la/1FaArfg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsOpen(false)}
+                  className="w-full relative overflow-hidden group py-3 sm:py-4 px-4 sm:px-6 bg-[#3483fa] text-white text-sm sm:text-lg font-bold rounded-xl hover:bg-[#2968c8] transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3"
+                >
+                  <ShoppingCart className="w-6 h-6 sm:w-8 sm:h-8" />
+                  COMPRAR COM DESCONTO
+                </a>
+              ) : (
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsOpen(false)}
+                  className="w-full relative overflow-hidden group py-3 sm:py-4 px-4 sm:px-6 bg-[#25D366] text-white text-sm sm:text-lg font-bold rounded-xl hover:scale-[1.02] transition-all duration-300 shadow-[0_0_30px_rgba(37,211,102,0.4)] flex items-center justify-center gap-2 sm:gap-3"
+                >
+                  <div className="relative w-6 h-6 sm:w-8 sm:h-8 overflow-hidden rounded-full shrink-0">
+                    <img
+                      src="/logo%20whatsapp.png"
+                      alt="WhatsApp"
+                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[190%] h-[190%] max-w-none object-contain"
+                    />
+                  </div>
+                  EU QUERO MEU DESCONTO AGORA
+                </a>
+              )}
 
               <p
                 className="text-zinc-500 text-xs sm:text-sm mt-4 cursor-pointer hover:text-zinc-400"
