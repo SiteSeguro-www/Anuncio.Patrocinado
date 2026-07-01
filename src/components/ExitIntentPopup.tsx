@@ -7,7 +7,7 @@ export default function ExitIntentPopup() {
   const [isOpen, setIsOpen] = useState(false);
   const [hasShown, setHasShown] = useState(false);
   const location = useLocation();
-  const isMantaTermica = location.pathname === "/manta-termica";
+  const isMantaTermica = location.pathname === "/manta-termica" || location.pathname === "/manta-termica-g215";
 
   useEffect(() => {
     const handleMouseLeave = (e: MouseEvent) => {

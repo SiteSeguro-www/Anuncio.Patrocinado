@@ -9,6 +9,7 @@ import Sobre from "./pages/Sobre";
 import Contato from "./pages/Contato";
 import FaqPage from "./pages/FaqPage";
 import MantaTermica from "./pages/MantaTermica";
+import MantaTermicaG215 from "./pages/MantaTermicaG215";
 import ExitIntentPopup from "./components/ExitIntentPopup";
 import "./index.css";
 
@@ -25,6 +26,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/contato" element={<Contato />} />
         <Route path="/faq" element={<FaqPage />} />
         <Route path="/manta-termica" element={<MantaTermica />} />
+        <Route path="/manta-termica-g215" element={<MantaTermicaG215 />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
