@@ -42,11 +42,11 @@ export default function MantaTermicaG215() {
           
           {/* Galeria de Imagens (Mobile e Desktop) */}
           <div className="w-full md:w-1/2 flex flex-col">
-            <div className="w-full aspect-square bg-zinc-100 flex items-center justify-center relative md:rounded-lg overflow-hidden">
+            <div className="w-full aspect-square bg-white flex items-center justify-center relative md:rounded-lg overflow-hidden">
               <img 
                 src={media[currentMedia].src} 
                 alt="Cama Térmica Ajustável Para Cães G215" 
-                className="w-full h-full object-contain"
+                className="w-auto h-auto max-w-full max-h-full object-contain mix-blend-multiply p-4"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src = "https://placehold.co/600x600/e2e8f0/64748b?text=Imagem+da+Manta";
                 }}
@@ -62,12 +62,12 @@ export default function MantaTermicaG215() {
                 <button 
                   key={idx}
                   onClick={() => setCurrentMedia(idx)}
-                  className={`w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-md border-2 overflow-hidden flex items-center justify-center bg-zinc-100 relative ${currentMedia === idx ? 'border-blue-500' : 'border-transparent'}`}
+                  className={`w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-md border-2 overflow-hidden flex items-center justify-center bg-white relative ${currentMedia === idx ? 'border-blue-500' : 'border-transparent'}`}
                 >
                   <img 
                     src={item.src} 
                     alt={`Miniatura ${idx + 1}`} 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain mix-blend-multiply p-1"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = "https://placehold.co/100x100/e2e8f0/64748b?text=Img";
                     }}
